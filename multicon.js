@@ -21,8 +21,8 @@ function askcontinue() {
     }   
 }
 function askconv(){
-    var useri = window.prompt("Which conversion ? (euros/celsius/litres)");
-    return useri ; 
+    var user_input = window.prompt("Which conversion ? (euros/celsius/litres)");
+    return user_input ; 
 }
 
 function askvalue(){
@@ -33,21 +33,21 @@ function askvalue(){
 while (askcontinue()) {
     var conver = askconv();
     var value = askvalue ();
-    var resultmess = "the result is ";
+    var message = "the result is ";
  
     
-    if (conver == "euros") {
+    if (message == "euros") {
         resultmess += chfToeuros(Number(value)).toString();
     } 
-    else if (conver == "litres") {
+    else if (message == "litres") {
         resultmess += litterTogallon(Number(value)).toString();
     } 
-    else if (conver == "celsius") {
+    else if (message == "celsius") {
         resultmess += celsiusTf(Number(value)).toString();
     } 
     else {
-        resultmess = "Sorry ! I cant do this conversion..."
+        message = "Sorry ! I cant do this conversion..."
     }
-    console.log(resultmess);
+    console.log(message);
 
 }
