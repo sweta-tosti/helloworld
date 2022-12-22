@@ -1,52 +1,66 @@
 
-function chfToeuros(chf){
-    return (chf * 1.13);
+function chf(x){
+    return (x * 1.13);
 }
-function celsiusTf(celsius){
-    return (celsius * 9 / 5) + 32 ;
+function celsius(y){
+    return (y * 9 / 5) + 32 ;
 }
-function litterTogallon(littre) {
-    return (littre / 3.785) ;    
+function litter(z) {
+    return (z / .264) ;    
 }
 
 
 function askcontinue() {
-    var userInput = window.prompt("Do you want to do a conversion:yes/no");
-    if (userInput == "yes"){
+    var userInput = window.prompt("Do you want to do a conversion: yes/no");
+    if (userInput == "yes".toLowerCase()){
         return true ;
+    }    
+    else if (userInput == "No".toLowerCase()){
+        return false ;
+    
+    }
+    else{
+        console.log("Please Type only 'Yes' or 'No");
+
+    }
+    
+}
+function conversion(){
+    var user_input = window.prompt("Which conversion ? (euros/celsius/litres)");
+
+    if (user_input  == "euros" ||"celsius" || "litres"){
+
+        return user_input;
     }
     else {
-        return false ;
-     
-    }   
-}
-function askconv(){
-    var user_input = window.prompt("Which conversion ? (euros/celsius/litres)");
-    return user_input ; 
+        exit()
+    }
 }
 
-function askvalue(){
-    var value = window.prompt("Which value do you want to convert");
-    return value ;
+function value(){
+    var amount = window.prompt("Which value do you want to convert");
+    return amount ;
 }
 
 while (askcontinue()) {
-    var conver = askconv();
-    var value = askvalue ();
-    var message = "the result is ";
+
+    var conversionType = conversion();
+    var valueToConvert = value ();
+    var message = "The result is ";
  
     
-    if (message == "euros") {
-        resultmess += chfToeuros(Number(value)).toString();
+    if (conversionType == "euros") {
+        message += chf(Number(valueToConvert)).toString();
     } 
-    else if (message == "litres") {
-        resultmess += litterTogallon(Number(value)).toString();
+    else if (conversionType == "litres") {
+        message += litter(Number(valueToConvert)).toString();
     } 
-    else if (message == "celsius") {
-        resultmess += celsiusTf(Number(value)).toString();
+    else if (conversionType == "celsius") {
+        message += celsius(Number(valueToConvert)).toString();
     } 
     else {
-        message = "Sorry ! I cant do this conversion..."
+        console.log("Sorry ! I cant do this conversion...");
+        break;
     }
     console.log(message);
 
