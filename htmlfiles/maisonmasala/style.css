@@ -29,3 +29,12 @@ h4{
 #social{
     font-weight: bold;
 }
+#second{
+    color : #ed0505;
+    text-align: left;
+    background-color: white;
+    text-decoration: dotted;
+}
+#mailid{
+    text-align: left;
+}
