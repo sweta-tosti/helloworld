@@ -38,5 +38,5 @@ machine2.stop(40)
 
 
 
-# print("My first coffee machine's is from " +  machine1.brand + " company & it was " + machine1.color + ".")
+# print("My first coffee machine's was from " +  machine1.brand + " company & it was " + machine1.color + ".")
 # print("Now my coffee machine's is from " +  machine2.brand + " company & it is " + machine2.color + ".")
