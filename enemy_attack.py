@@ -27,19 +27,10 @@ class Player:
                 number_of_attack += 1
 
         print(self.name + " lost game in " + str(number_of_attack) + " attempts of attack.")
-            
-            
-
+                     
 reena = Player()
 reena.name = "Reena"
 reena.healthpoints = 150
 reena.weapon =  "Toothbrush"
 
 reena.attack()
-
-
-
-
-
-
-
