@@ -1,10 +1,10 @@
 import random
 
 class Player:
-    name = ""
-    strength = 0
-    weapon = ""
-    healthpoints = 0
+    def __init__(self, name, strength, healthpoints):
+        self.name = name
+        self.strength = strength
+        self.healthpoints = healthpoints
 
     def call_for_help(self):
         print(self.name + " Calling for help.")
@@ -28,9 +28,6 @@ class Player:
 
         print(self.name + " lost game in " + str(number_of_attack) + " attempts of attack.")
                      
-reena = Player()
-reena.name = "Reena"
-reena.healthpoints = 150
-reena.weapon =  "Toothbrush"
+reena = Player("Renna", "low", 150)
 
 reena.attack()
