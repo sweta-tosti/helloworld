@@ -39,8 +39,7 @@ footer{
     color : #ed0505;
     text-align: left;
     background-color: white;
-    text-decoration: dotted;
-}
-#mailid{
-    text-align: left;
+    border-style: solid;
+    border-color: rgb(230, 234, 234);
+
 }
