@@ -9,10 +9,10 @@ class Digitalcar:
     def drive(self, speed):
         print(self.model + "," + self.brand + " is driving at " + str(speed) + " km/h.")
 
-    def car_wheels(self, material):
-        print(self.model + " wheels are made of " + material + ".")
+    def suspension_brake(self, available_brake):
+        print("In " + self.brand + "'s " + self.model + "car " + str(available_brake) + " breaks are availabe.")
 
-    def car_fuel(self):
+    def pollution(self):
         print(self.brand + " makes pollution free car.")
 
 #object
@@ -20,4 +20,5 @@ my_first_car = Digitalcar("RAV4 PHEV", "Toyota", "orange", 2001)
 my_second_car = Digitalcar("Q3", "Audi", "white", 2021)
 
 my_first_car.drive(88)
+my_first_car.suspension_brake(1)
 
